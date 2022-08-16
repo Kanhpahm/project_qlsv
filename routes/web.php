@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\FacultyController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::prefix('admin')->group(function () {
+    Route::prefix('/faculty')->group(function () {
+        Route::get('/', [FacultyController::class,'index'])->name('faculty');
+        // Route::get('/add-form', [FacultyController::class,index])->name('faculty');
+    });
 });
+
+Route::prefix('/')->group(function () {
+    Route::prefix('/faculty')->group(function () {
+
+    });
+});
+
