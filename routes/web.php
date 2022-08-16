@@ -17,7 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('admin')->group(function () {
     Route::prefix('/faculty')->group(function () {
         Route::get('/', [FacultyController::class,'index'])->name('faculty');
-        // Route::get('/add-form', [FacultyController::class,index])->name('faculty');
+        Route::get('/add-form', [FacultyController::class,'create'])->name('faculty-add');
+        Route::post('/add-form', [FacultyController::class,'store']);
     });
 });
 

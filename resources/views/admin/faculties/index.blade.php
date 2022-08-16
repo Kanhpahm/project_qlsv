@@ -14,7 +14,7 @@
         <label class="form-label">Search here...</label>
         <input type="text" name="search" class="form-control">
     </div>
- 
+
 </form>
     <div class="card-body px-0 pb-2">
         <div class="table-responsive p-0">
@@ -23,9 +23,8 @@
                     <tr>
                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Stt</th>
                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Name</th>
-                        {{-- <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Image</th>
-                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Status</th> --}}
-                           
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                            <a href="{{route('faculty-add')}}" class="btn btn-info btn-sm"> Add Faculty</a></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -37,10 +36,9 @@
                             <td>
                                 {{ $item->name}}
                             </td>
-                            
+                            <td></td>
                         </tr>
                     @endforeach
-
                 </tbody>
             </table>
         </div>
