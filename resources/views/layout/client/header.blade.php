@@ -25,7 +25,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                        <!-- <li class="nav-item active">
+                    <div></div>
+                    <!-- <li class="nav-item active">
                             <a class="nav-link" href="#">Welcome
                                 <span class="sr-only">(current)</span><strong></strong>
                             </a>
@@ -39,9 +40,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="?action=logout">Logout</a>
                         </li> -->
-                        <li class="nav-item"><a class="nav-link" href="index.php">Login</a></li>
-                        <li class="nav-item"><a class="nav-link" href="register.php">Register</a></li>
-                        <li class="nav-item"><a class="nav-link" href="admin/">Admin</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.php">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="register.php">Register</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin/">Admin</a></li>
                 </ul>
             </div>
         </div>
