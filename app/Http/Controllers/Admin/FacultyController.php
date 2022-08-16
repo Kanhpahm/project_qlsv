@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 
 class FacultyController extends Controller
 {
+    
     protected $facultyService;
     public function __construct( FacultyService $facultyService)
     {
