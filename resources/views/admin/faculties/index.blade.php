@@ -6,7 +6,7 @@
     <div>
     </div>
 
-{{-- @include('admin.alert') --}}
+ @include('admin.admin-alert')
 <br>
 
 <form action="">
@@ -24,7 +24,7 @@
                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Stt</th>
                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Name</th>
                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
-                            <a href="{{route('faculty-add')}}" class="btn btn-info btn-sm"> Add Faculty</a></th>
+                            <a href="{{route('faculty.create')}}" class="btn btn-info btn-sm"> Add Faculty </a></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -36,7 +36,26 @@
                             <td>
                                 {{ $item->name}}
                             </td>
-                            <td></td>
+                            <td class="align-middle">
+                                <a href="{{ route('faculty.edit', $item->id) }}">
+                                    <button class="btn btn-danger" style="font-size:9px"href="javascript:;"
+                                            class="text-secondary font-weight-bold text-xs" data-toggle="tooltip"
+                                            data-original-title="Edit user">
+                                        Sửa
+                                    </button>
+                                </a>
+{{--                                <form action="{{ route('category-delete', $item->id) }}" method="POST">--}}
+{{--                                    <button class="btn btn-danger"--}}
+{{--                                            onclick="return confirm('Bạn có chắc xóa {{ $item->name }} ?')"--}}
+{{--                                            style="font-size:9px"href="javascript:;"--}}
+{{--                                            class="text-secondary font-weight-bold text-xs" data-toggle="tooltip"--}}
+{{--                                            data-original-title="Edit user">--}}
+{{--                                        Xóa--}}
+{{--                                    </button>--}}
+{{--                                    @csrf--}}
+{{--                                    @method('DELETE')--}}
+{{--                                </form>--}}
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>

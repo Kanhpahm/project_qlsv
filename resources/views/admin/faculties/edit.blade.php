@@ -1,11 +1,12 @@
 @extends('admin.admin-master')
-@section('title', 'Add Faculty')
-@section('content-title', 'Add Faculty')
-@section('danh-muc', 'Add Faculty')
+@section('title', 'Edit Faculty')
+@section('content-title', 'Edit Faculty')
+@section('danh-muc', 'Edit Faculty')
 @section('content')
 
 
-    <form action="{{route('faculty.store')}} " method="post" enctype="multipart/form-data">
+    <form action="{{route('faculty.update',$faculty->id)}} " method="post" enctype="multipart/form-data">
+        @method('PUT')
         <br>
         @csrf
         @include('admin.admin-alert')
@@ -13,17 +14,18 @@
             <div class="col">
                 <div class="form-outline">
                     <label class="form-label" for="form3Example1">Name Faculty</label>
-                    <input type="text" id="form3Example1" value="{{ old('name') }}" name="name"
-                        class="form-control" />
+
+                    <input type="text" id="form3Example1" value=" {{ $faculty->name }}" name="name"
+                           class="form-control" />
                     @error('name')
-                        <h6 class="text-danger">{{ $message }} </h6>
+                    <h6 class="text-danger">{{ $message }} </h6>
                     @enderror
                 </div>
             </div>
 
         </div>
 
-        <button type="submit" class="btn btn-danger btn-block mb-4">Tạo mới</button>
+        <button type="submit" class="btn btn-danger btn-block mb-4">Cập nhật</button>
         <!-- Register buttons -->
         <button type="reset" class="btn btn-warning btn-block mb-4">Nhập lại</button>
 
